@@ -1,0 +1,47 @@
+{
+  "name": "eve-whatsapp-group-agent",
+  "version": "0.0.0",
+  "type": "module",
+  "imports": {
+    "#data/*": "./agent/lib/data/*",
+    "#*": "./agent/*",
+    "#evals/*": "./evals/*"
+  },
+  "scripts": {
+    "build": "eve build",
+    "dev": "eve dev",
+    "start": "eve start",
+    "test": "vitest run",
+    "test:evals": "eve eval --strict",
+    "smoke": "node scripts/smoke.ts",
+    "typecheck": "tsgo",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
+    "prepare": "lefthook install || true"
+  },
+  "dependencies": {
+    "@vercel/connect": "0.2.8",
+    "ai": "7.0.0-beta.178",
+    "eve": "^0.11.10",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "24.x",
+    "@typescript/native-preview": "7.0.0-dev.20260701.1",
+    "lefthook": "^2.1.9",
+    "microsandbox": "^0.5.10",
+    "oxfmt": "^0.57.0",
+    "oxlint": "^1.72.0",
+    "ultracite": "^7.8.3",
+    "vitest": "^4.1.9"
+  },
+  "resolutions": {
+    "ai": "7.0.0-beta.178"
+  },
+  "overrides": {
+    "ai": "7.0.0-beta.178"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
