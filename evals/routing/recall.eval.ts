@@ -5,7 +5,7 @@ export default defineEval({
     "A 'who said X' recall ask searches the chat (which now spans recent + archive).",
   async test(t) {
     await t.send("who was talking about pricing changes in here recently?");
-    t.completed();
+    t.succeeded();
     t.calledTool("search-chat");
   },
 });

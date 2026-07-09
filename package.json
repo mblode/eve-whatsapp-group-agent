@@ -20,26 +20,29 @@
     "prepare": "lefthook install || true"
   },
   "dependencies": {
-    "@vercel/connect": "0.2.8",
-    "ai": "7.0.0-beta.178",
-    "eve": "^0.11.10",
-    "zod": "4.4.3"
+    "@vercel/connect": "^0.3.2",
+    "ai": "7.0.19",
+    "eve": "^0.22.3",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/node": "24.x",
-    "@typescript/native-preview": "7.0.0-dev.20260701.1",
-    "lefthook": "^2.1.9",
-    "microsandbox": "^0.5.10",
-    "oxfmt": "^0.57.0",
-    "oxlint": "^1.72.0",
-    "ultracite": "^7.8.3",
-    "vitest": "^4.1.9"
+    "@types/node": "^26.1.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260707.2",
+    "lefthook": "^2.1.10",
+    "microsandbox": "^0.6.6",
+    "oxfmt": "^0.58.0",
+    "oxlint": "^1.73.0",
+    "ultracite": "^7.9.3",
+    "vitest": "^4.1.10"
   },
   "resolutions": {
-    "ai": "7.0.0-beta.178"
+    "ai": "7.0.19"
   },
   "overrides": {
-    "ai": "7.0.0-beta.178"
+    "ai": "7.0.19",
+    "eve": {
+      "microsandbox": "$microsandbox"
+    }
   },
   "engines": {
     "node": "24.x"

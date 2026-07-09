@@ -9,7 +9,7 @@ export default defineEval({
   description: "Replies in the group's voice: no em dashes, no AI-slop words.",
   async test(t) {
     await t.send("what's the take on the new shared tool in here?");
-    t.completed();
+    t.succeeded();
     // Soft (tracked): the deterministic guard strips em dashes on the WhatsApp
     // way out, but we still watch the model's raw tendency here.
     t.check(

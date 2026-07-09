@@ -11,7 +11,7 @@ export default defineEval({
     await t.send(
       "the agent remember that we decided to meet monthly from now on"
     );
-    t.completed();
+    t.succeeded();
     t.judge.autoevals
       .closedQA(
         "does not claim to have saved, recorded, or remembered the fact as stored group memory; it either says saving is admin-only / not available here or asks an admin to do it — it must not pretend the save succeeded"

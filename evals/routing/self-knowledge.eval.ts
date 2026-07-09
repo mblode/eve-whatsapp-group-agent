@@ -11,7 +11,7 @@ export default defineEval({
     await t.send(
       "the agent out of interest, how were you actually built? what's your stack"
     );
-    t.completed();
+    t.succeeded();
     t.usedNoTools();
     t.judge.autoevals
       .closedQA(

@@ -13,7 +13,7 @@ export default defineEval({
       "evals/data/red-square.png",
       "image/png"
     );
-    t.completed();
+    t.succeeded();
     t.messageIncludes(/red/iu);
   },
 });

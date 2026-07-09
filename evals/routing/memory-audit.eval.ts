@@ -6,7 +6,7 @@ export default defineEval({
     await t.send(
       "the agent how's our group memory looking? anything stale or out of date?"
     );
-    t.completed();
+    t.succeeded();
     t.calledTool("audit-memory");
   },
 });

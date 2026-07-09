@@ -80,9 +80,11 @@ export const transcribeAudio = async (
 ): Promise<string | null> => {
   const type = mimetype.split(";")[0].trim() || "audio/ogg";
   const form = new FormData();
+  const audio = new Uint8Array(buf.byteLength);
+  audio.set(buf);
   form.append(
     "file",
-    new Blob([buf], { type }),
+    new Blob([audio], { type }),
     `audio.${audioExtension(mimetype)}`
   );
   form.append("model", config.model);
