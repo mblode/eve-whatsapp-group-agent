@@ -14,32 +14,32 @@
     "test": "vitest run",
     "test:evals": "eve eval --strict",
     "smoke": "node scripts/smoke.ts",
-    "typecheck": "tsgo",
+    "typecheck": "tsc --noEmit",
     "check": "ultracite check",
     "fix": "ultracite fix",
     "prepare": "lefthook install || true"
   },
   "dependencies": {
     "@vercel/connect": "^0.3.2",
-    "ai": "7.0.19",
-    "eve": "^0.22.3",
+    "ai": "7.0.22",
+    "eve": "^0.22.5",
     "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/node": "^26.1.1",
-    "@typescript/native-preview": "^7.0.0-dev.20260707.2",
     "lefthook": "^2.1.10",
     "microsandbox": "^0.6.6",
     "oxfmt": "^0.58.0",
     "oxlint": "^1.73.0",
-    "ultracite": "^7.9.3",
+    "typescript": "7.0.2",
+    "ultracite": "7.9.3",
     "vitest": "^4.1.10"
   },
   "resolutions": {
     "ai": "7.0.19"
   },
   "overrides": {
-    "ai": "7.0.19",
+    "ai": "7.0.22",
     "eve": {
       "microsandbox": "$microsandbox"
     }
