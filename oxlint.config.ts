@@ -4,7 +4,7 @@ import vitest from "ultracite/oxlint/vitest";
 
 export default defineConfig({
   extends: [core, vitest],
-  ignorePatterns: core.ignorePatterns,
+  ignorePatterns: [...core.ignorePatterns, "**/.eve-vendor"],
   // Agent-friendly guardrail: keep files small enough to hold in one context.
   // Warn (not error) so it flags growth without blocking; data blobs, tests, and
   // the bridge orchestrator (see its ARCHITECTURE marker) are exempt.

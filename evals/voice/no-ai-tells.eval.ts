@@ -3,7 +3,7 @@ import { matches } from "eve/evals/expect";
 import { z } from "zod";
 
 const SLOP =
-  /\b(?<word>delve|leverage|robust|seamless|pivotal|intricate|unlock|empower|facilitate|moreover|furthermore)\b/iu;
+  /\b(?<word>actionable|boasts|crucial|delve|elevate|empower|facilitate|foster|furthermore|holistic|impactful|intricate|learnings|leverage|moreover|nuanced|pivotal|robust|seamless|showcase|streamline|underscores|unlock|utilize)\b/iu;
 
 export default defineEval({
   description: "Replies in the group's voice: no em dashes, no AI-slop words.",
@@ -33,7 +33,7 @@ export default defineEval({
     // an empty archive, so an honest "no group hits" answer should also pass.
     t.judge.autoevals
       .closedQA(
-        "sounds like a knowledgeable member rather than a corporate assistant: plain language, no AI preamble or sign-off, and either grounds the take in named group messages when available or plainly says there are no group-history hits instead of inventing a take"
+        "sounds like a terse Australian builder in a WhatsApp group rather than a corporate assistant: short natural lines, plain language, no prompt echo, AI preamble, or sign-off, and either grounds the take in named group messages when available or plainly says there are no group-history hits instead of inventing a take"
       )
       .atLeast(0.6);
   },

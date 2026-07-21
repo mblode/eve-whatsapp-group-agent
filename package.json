@@ -12,7 +12,7 @@
     "dev": "eve dev",
     "start": "eve start",
     "test": "vitest run",
-    "test:evals": "eve eval --strict",
+    "test:evals": "EVE_DOCKER_PATH=/usr/bin/false eve eval --strict",
     "smoke": "node scripts/smoke.ts",
     "typecheck": "tsc --noEmit",
     "check": "ultracite check",
@@ -20,29 +20,23 @@
     "prepare": "lefthook install || true"
   },
   "dependencies": {
-    "@vercel/connect": "^0.3.2",
-    "ai": "7.0.22",
-    "eve": "^0.22.5",
-    "zod": "^4.4.3"
+    "@vercel/connect": "^0.4.2",
+    "ai": "7.0.32",
+    "eve": "^0.26.1",
+    "zod": "4.4.3"
   },
   "devDependencies": {
-    "@types/node": "^26.1.1",
+    "@types/node": "26.x",
     "lefthook": "^2.1.10",
-    "microsandbox": "^0.6.6",
-    "oxfmt": "^0.58.0",
-    "oxlint": "^1.73.0",
+    "microsandbox": "^0.5.10",
+    "oxfmt": "^0.59.0",
+    "oxlint": "^1.74.0",
     "typescript": "7.0.2",
-    "ultracite": "7.9.3",
+    "ultracite": "7.9.4",
     "vitest": "^4.1.10"
   },
-  "resolutions": {
-    "ai": "7.0.19"
-  },
   "overrides": {
-    "ai": "7.0.22",
-    "eve": {
-      "microsandbox": "$microsandbox"
-    }
+    "ai": "7.0.32"
   },
   "engines": {
     "node": "24.x"
